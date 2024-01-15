@@ -1,29 +1,96 @@
-body{
-    margin :0;
-    padding : 0;
-    min-height : 100vh;
-    display : flex;
-    flex-direction : column;
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+    display: flex;
+    flex-direction: column;
 }
 
-header{
+header {
     background-color: rgb(223, 134, 17);
-    color: white;
+    color: white ;
     text-align: center;
-    padding : 20px;
-    font-family: 'Josefin Sans', sans-serif;
+    padding: 20px;
+    
 }
 
-#container{
-    flex :1;
-    width : 80%;
+#container {
+    flex: 1;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-
 }
 
-.gallery{
-    float :left;
-    width : 300px;
+.gallery {
+    float: left;
+    width: 300px;
+    padding: 10px;
+    margin: 25px;
+    border: 1px solid sandybrown;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.gallery img {
+    width: 300px;
+    height: 200px;
+}
+
+#btn1 {
+    text-align: center;
+    float: right;
+}
+
+#btn2 {
+    text-align: center;
+    float: right;
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: rgb(223, 134, 17);
+    color: white;
+}
+
+button {
+    background-color: rgb(225, 179, 139);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: rgb(223, 134, 17);
+}
+
+.topnav {
+    background-color: rgb(225, 179, 139);
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: rgb(225, 196, 109);
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: rgb(176, 144, 48);
+    color: white;
 }

@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+header {
+background-color: rgb(223, 134, 17);
+color: white ;
+text-align: center;
+padding: 20px;
+font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Product container styles */
+.product-container {
+    width: 30%; /* Adjust the width as needed */
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgb(223, 134, 17);
+    background-color: #fff;
+}
+
+/* Product image styles */
+.product-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Product title styles */
+.product-container p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+/* Product description styles */
+.product-container summary {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Reviews styles */
+.product-container p.reviews {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.topnav {
+    background-color: rgb(225, 179, 139);
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: rgb(225, 196, 109);
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: rgb(176, 144, 48);
+    color: white;
+}
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: rgb(223, 134, 17);
+    color: white;
+}
