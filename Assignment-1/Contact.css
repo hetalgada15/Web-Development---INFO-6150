@@ -6,7 +6,7 @@ body {
 }
 
 header {
-background-color: rgb(223, 134, 17);
+background-color: #142d4c;
 color: white ;
 text-align: center;
 padding: 20px;
@@ -18,7 +18,7 @@ font-family: 'Josefin Sans', sans-serif;
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgb(223, 134, 17);
+    box-shadow: 0px 0px 10px #142d4c;
     border-radius: 5px;
 }
 
@@ -68,7 +68,7 @@ input[type="submit"]:hover {
 }
 
 .topnav {
-    background-color: rgb(225, 179, 139);
+    background-color: #9fd3c7; 
     overflow: hidden;
 }
 
@@ -90,13 +90,13 @@ input[type="submit"]:hover {
 
 /* Add a color to the active/current link */
 .topnav a.active {
-    background-color: rgb(176, 144, 48);
+    background-color: #aeccc6; 
     color: white;
 }
 
 footer {
     text-align: center;
     padding: 3px;
-    background-color: rgb(223, 134, 17);
+    background-color: #142d4c;
     color: white;
 }

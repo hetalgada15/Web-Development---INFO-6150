@@ -7,7 +7,7 @@ body {
 
 
 header {
-background-color: rgb(223, 134, 17);
+background-color: #142d4c;
 color: white ;
 text-align: center;
 padding: 20px;
@@ -30,7 +30,7 @@ font-family: 'Josefin Sans', sans-serif;
     margin: 10px;
     padding: 20px;
     border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgb(223, 134, 17);
+    box-shadow: 0 2px 4px #142d4c;
     background-color: #fff;
 }
 
@@ -63,7 +63,7 @@ font-family: 'Josefin Sans', sans-serif;
 }
 
 .topnav {
-    background-color: rgb(225, 179, 139);
+    background-color: #9fd3c7; 
     overflow: hidden;
 }
 
@@ -91,6 +91,6 @@ font-family: 'Josefin Sans', sans-serif;
 footer {
     text-align: center;
     padding: 3px;
-    background-color: rgb(223, 134, 17);
+    background-color: #142d4c;
     color: white;
 }

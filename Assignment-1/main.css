@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: rgb(223, 134, 17);
+    background-color: #142d4c;
     color: white ;
     text-align: center;
     padding: 20px;
@@ -22,18 +22,32 @@ header {
     text-align: center;
 }
 
+#container p {
+    padding-top : 12px;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+    height :100 px;
+
+}
+
 .gallery {
     float: left;
     width: 300px;
     padding: 10px;
     margin: 25px;
-    border: 1px solid sandybrown;
+    border: 1px double #aeccc6; 
     font-family: 'Josefin Sans', sans-serif;
 }
 
 .gallery img {
     width: 300px;
     height: 200px;
+}
+
+.gallery h4{
+    font-weight: bold;
+    color : green;
 }
 
 #btn1 {
@@ -49,12 +63,12 @@ header {
 footer {
     text-align: center;
     padding: 3px;
-    background-color: rgb(223, 134, 17);
+    background-color: #142d4c;
     color: white;
 }
 
 button {
-    background-color: rgb(225, 179, 139);
+    background-color: #9fd3c7; 
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -65,11 +79,11 @@ button {
 
 /* Hover effect */
 button:hover {
-    background-color: rgb(223, 134, 17);
+    background-color: #142d4c;
 }
 
 .topnav {
-    background-color: rgb(225, 179, 139);
+    background-color: #9fd3c7; 
     overflow: hidden;
 }
 
@@ -91,6 +105,8 @@ button:hover {
 
 /* Add a color to the active/current link */
 .topnav a.active {
-    background-color: rgb(176, 144, 48);
+    background-color: #aeccc6; 
     color: white;
+    font-weight: bold;
+    font-size: 15px;
 }
