@@ -1,0 +1,290 @@
+body {
+
+    background-color: #B7C68B;
+  
+  }
+  
+  #section1 {
+    width: 100%;
+    height: 100vh;
+  
+  }
+  
+  .header1 {
+    padding: 10px 16%;
+  
+  }
+  
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+  }
+  
+  nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 35px;
+    text-align: center;
+  }
+  
+  nav ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  
+  a:hover {
+    color: #685642;
+  }
+  
+  .header2 {
+    text-align: center;
+    padding: 20px;
+    margin-top: 7%;
+  }
+  
+  .header2 h1 {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: 'Palatino', serif;
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .header2 h1 span {
+    color: #685642;
+  }
+  
+  a.git {
+    display: inline-block;
+      padding: 0.90em 2.2em;
+      border: 0.1em solid #FFFFFF;
+      margin: 1.2em 0.3em 0.3em 42em;
+      border-radius: 0.12em;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: 'Palatino', serif;
+      font-weight: 300;
+      color: #FFFFFF;
+      text-align: center;
+      transition: all 0.2s;
+    }
+  
+  a.git:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+  }
+  
+  #section2 {
+    padding: 80px 50px;
+    color: black;
+    font-weight: 600;
+  }
+  
+  .row1 {
+    display: flex;
+    justify-content: space-between;
+
+  
+  }
+  
+  .col1 {
+    flex-basis: 35%;
+  }
+  
+  .col1 img {
+    width: 100%;
+    border-radius: 15px;
+  }
+  
+  
+  .col2 {
+    flex-basis: 60%;
+  }
+  
+  .col2 h1 {
+    color: #685642;
+  
+    font-family: 'Open Sans', sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+  }
+  
+  .col2 p {
+    color: white;
+    padding-top: 3%;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+    overflow: hidden;
+  }
+  
+  .skills {
+    padding-top: 2%;
+    color : white;
+    
+  }
+  
+  .skills1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .skills2 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .skills2 li {
+    padding-top: 0%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:lighter;
+    color: #3c3522;
+  }
+  
+  #section3 {
+    padding: 80px 50px;
+    color: white;
+  }
+  
+  #section3 h1 {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 768px) ,(min-device-width: 350px) and (max-device-width: 768px) {
+  
+    .header2 {
+      font-size: 16px;
+      margin-top: 0%;
+      text-align: center;
+    }
+  
+    .header2 h1 {
+      font-size: 20px;
+      text-align: center;
+  
+  
+    }
+  
+    .header1 nav ul {
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 40vh;
+      padding-top: 0px;
+      
+    }
+  
+    .header1 nav ul li {
+      display: block;
+      margin: 20px;
+      margin-left: 10px;
+    }
+  
+    .header1 a:hover {
+      color: aqua;
+    }
+  
+    .col2 h1 {
+      font-size: 40px;
+    }
+  
+    .col1,
+    .col2 {
+      flex-basis: 100%;
+  
+    }
+  
+    .col2 p {
+      font-size: 20px;
+      overflow: hidden;
+    }
+  
+    .col1 img {
+      float: inline-end;
+  
+    }
+    a.git {
+      display: block;
+      margin-left: 300px;
+      margin-right: 300px;
+  
+    }
+  
+  
+  
+  }
+  
+  
+  @media screen and (max-width: 375px),(min-device-width: 350px) and (max-device-width: 768px)  {
+  
+    .header2 {
+      font-size: 16px;
+      margin-top: 0%;
+      text-align: center;
+    }
+  
+    .header2 h1 {
+      font-size: 20px;
+      text-align: center;
+  
+  
+    }
+  
+    .header1 nav ul {
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 40vh;
+      padding-top: 0px;
+    }
+  
+    .header1 nav ul li {
+      display: block;
+      margin: 10px;
+      margin-left: 0px;
+    }
+  
+    .header1 a:hover {
+      color: aqua;
+    }
+  
+    .col2 h1 {
+      font-size: 40px;
+    }
+  
+    .col1,
+    .col2 {
+      flex-basis: 100%;
+  
+    }
+  
+    .col2 p {
+      font-size: 20px;
+    }
+  
+    .col1 img {
+      float: inline-end;
+  
+    }
+    a.git {
+      display: block;
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+  
+   .Sites{
+    float: left;
+   }
+  }
