@@ -1,43 +1,39 @@
 //Title constructor function that creates a Title object
-function Title(t1) 
-{ this.mytitle = t1;
+function Title(t1) {
+  this.mytitle = t1;
 }
 
-Title.prototype.getName = function () 
-{ 
-return (this.mytitle);
+Title.prototype.getName = function () {
+  return (this.mytitle);
 }
 
 var socialMedia = {
-  facebook : 'http://facebook.com',
+  facebook: 'http://facebook.com',
   twitter: 'http://twitter.com',
   flickr: 'http://flickr.com',
   youtube: 'http://youtube.com'
 };
 
 var t = new Title("CONNECT WITH ME!");
-var check_flags=0;
-var count_student= 0;
+var check_flag = 0;
+var student_count = 0;
 
-
-//collapsing of rows:
-
-function mycollapse(collapse_row){
+// collapse the row
+function mycollapse(collapse_row) {
   console.log(document.getElementById(collapse_row).style.display);
-  var row_no= document.getElementById(collapse_row);
+  var row_no = document.getElementById(collapse_row);
 
-  if(row_no.style.display== 'none') //if the row is currently hidden
-  {
-    row_no.style.display= "table-row"; //make it visible
+  if (row_no.style.display == 'none') {
+    row_no.style.display = 'table-row';
   }
 
-  else{
-    row_no.style.display= "none";
+  else {
+    row_no.style.display = 'none';
   }
+
 }
 
-//Addition of students in a table:
-
+// Add a new student to a table
 function addStudent() {
 
   var table = document.getElementById("myTable");
@@ -96,3 +92,82 @@ function addStudent() {
   hidden_row.innerHTML = "<td colspan='8'> Advisor:<br /><br /> Award Details<br /> Summer 1-2014(TA)<br /> Budget Number: <br /> Tuition Number: <br /> Comments:<br /><br /><br /> Award Status:<br /><br /><br /> </td>"
 }
 
+// Function for when checkbox is checked
+function oncheck(row, check) {
+  console.log(row);
+
+  var delete_cell = document.getElementById("myTable").rows[0].cells[8];
+  var edit_cell = document.getElementById("myTable").rows[0].cells[9];
+  var row_no = document.getElementById(row);
+  var button = document.getElementById("button");
+
+
+  if (document.getElementById(check).checked) {
+    check_flag++;
+    console.log(check_flag);
+    button.style.backgroundColor = 'orange'
+    button.style.border = '2px solid orange'
+
+    row_no.setAttribute("bgcolor", "yellow");
+    delete_cell.style.display = 'table-cell';
+    edit_cell.style.display = 'table-cell';
+
+    delete_cell = row_no.insertCell(8);
+    edit_cell = row_no.insertCell(9);
+    delete_cell.innerHTML = "<button onclick='delete_row(" + row + ")'>Delete</button>"
+    edit_cell.innerHTML = "<button onclick='edit_row(" + row + ")'>Edit</button>"
+  }
+  else {
+    check_flag--;
+    console.log(check_flag);
+
+    row_no.setAttribute("bgcolor", "white");
+
+    if (check_flag == 0) {
+      delete_cell.style.display = 'none';
+      edit_cell.style.display = 'none';
+      button.style.backgroundColor = 'gray'
+      button.style.border = '2px solid gray'
+    }
+
+    row_no.deleteCell(8);
+    row_no.deleteCell(8);
+
+  }
+
+// Deleting a row
+function delete_row(row) {
+  console.log(row.id);
+  var studentName = row.cells[1].textContent; 
+  if (confirm("Delete the record for " + studentName + "?")) {
+    check_flag--;
+    console.log(check_flag);
+    var delete_cell = document.getElementById("myTable").rows[0].cells[8];
+    //var edit_cell = document.getElementById("myTable").rows[0].cells[9];
+    if (check_flag == 0) {
+      delete_cell.style.display = 'none';
+      //edit_cell.style.display = 'none';
+      button.style.backgroundColor = 'gray'
+      button.style.border = '2px solid gray'
+
+    }
+    var row = document.getElementById(row.id);
+    row.parentNode.removeChild(row);
+
+    var hidden_row = document.getElementById("collapse_" + row.id);
+    hidden_row.parentNode.removeChild(hidden_row);
+    txt = studentName + " Record deleted successfully!";
+    window.alert(txt);
+  }
+  else {
+    txt = "You pressed Cancel!";
+    window.alert(txt);
+  }
+
+  
+  
+}
+
+
+
+}
