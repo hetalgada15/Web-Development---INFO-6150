@@ -135,6 +135,9 @@ function oncheck(row, check) {
 
   }
 
+}
+
+// Deleting a row
 // Deleting a row
 function delete_row(row) {
   console.log(row.id);
@@ -163,11 +166,20 @@ function delete_row(row) {
     txt = "You pressed Cancel!";
     window.alert(txt);
   }
+}
 
-  
-  
+
+function edit_row(row) {
+  var studentName = row.cells[1].textContent; 
+  var text = prompt("Edit the details "+ studentName, "");
+
+  if (text == null || text == "") {
+    msg = "User cancelled the prompt.";
+  } else {
+    msg = "Your text is edited" + text;
+  }
 }
 
 
 
-}
+
