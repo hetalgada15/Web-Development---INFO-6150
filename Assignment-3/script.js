@@ -137,7 +137,7 @@ function oncheck(row, check) {
 
 }
 
-// Deleting a row
+
 // Deleting a row
 function delete_row(row) {
   console.log(row.id);
@@ -170,15 +170,63 @@ function delete_row(row) {
 
 
 function edit_row(row) {
-  var studentName = row.cells[1].textContent; 
-  var text = prompt("Edit the details "+ studentName, "");
+  var studentName = row.cells[1].textContent;
+  var rowNumber = parseInt(studentName.split(" ")[1]);
+  var popupTitle = "Edit details of Student " + rowNumber;
 
-  if (text == null || text == "") {
-    msg = "User cancelled the prompt.";
-  } else {
-    msg = "Your text is edited" + text;
-  }
+  // Create a container for the popup
+  var popupContainer = document.createElement("div");
+  popupContainer.classList.add("popup");
+
+  // Set popup title
+  var titleElement = document.createElement("h2");
+  titleElement.textContent = popupTitle;
+
+  // Set popup content with student details
+  var contentElement = document.createElement("div");
+  contentElement.textContent =
+    "Student Name: " + row.cells[1].textContent +
+    "\nTeacher: " + row.cells[2].textContent +
+    "\nApproved: " + row.cells[3].textContent +
+    "\nTerm: " + row.cells[4].textContent +
+    "\nRole: " + row.cells[5].textContent +
+    "\nID: " + row.cells[6].textContent +
+    "\nPercentage: " + row.cells[7].textContent;
+
+  // Create "Update" and "Cancel" buttons
+  var updateButton = document.createElement("button");
+  updateButton.textContent = "Update";
+  updateButton.onclick = function () {
+    // Perform the update logic here
+    // For now, just close the popup
+    popupContainer.style.display = "none";
+    window.alert("Student " + rowNumber + " data updated successfully!");
+  };
+
+  var cancelButton = document.createElement("button");
+  cancelButton.textContent = "Cancel";
+  cancelButton.onclick = function () {
+    // Close the popup without updating
+    popupContainer.style.display = "none";
+    window.alert("Update cancelled.");
+  };
+
+  // Append elements to the popup container
+  popupContainer.appendChild(titleElement);
+  popupContainer.appendChild(contentElement);
+  popupContainer.appendChild(updateButton);
+  popupContainer.appendChild(cancelButton);
+
+  // Append the popup container to the body
+  document.body.appendChild(popupContainer);
+
+  // Display the popup
+  popupContainer.style.display = "block";
 }
+
+
+
+
 
 
 
