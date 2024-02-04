@@ -1,0 +1,48 @@
+body{
+    font-family: "Georgia";
+}
+label {	
+    float: left;
+    width: 150px;}
+#container{
+    width: 700px;
+    margin: auto;
+    background-color: beige;
+} 
+main{
+    padding: 50px;
+}
+.table{
+    border-color:beige;
+    align-items: center;
+}
+table {
+    width: fit-content;
+    margin: auto;
+    text-align: left;				
+}
+table, th, td {  
+    border: none;
+}
+th{
+    background-color: beige;
+    color: aliceblue;
+    text-align: center;
+}
+tr{
+    color:beige;
+    background-color: seashell;   
+}
+p{
+    text-align: center;
+    font-size: large;
+}
+
+@media screen and (max-width: 600px) {
+    table {width:100%;}
+    div {width:100%;}
+    form {width:100%;}
+ }
+ @media screen and (max-width: 360px) {
+    table {width:100%;}
+}
