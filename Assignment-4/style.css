@@ -25,12 +25,12 @@ table, th, td {
     border: none;
 }
 th{
-    background-color: beige;
+    background-color: #6D929B;
     color: aliceblue;
     text-align: center;
 }
 tr{
-    color:beige;
+    color: #B7AFA3;
     background-color: seashell;   
 }
 p{
