@@ -172,6 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var zipcode = row.insertCell(9);
         var hear = row.insertCell(10);
         var selectDrink = row.insertCell(11);
+        var comments= row.insertCell(12);
   
         title.innerHTML = document.querySelector('input[name="title"]:checked')
           .value;
@@ -187,6 +188,10 @@ document.addEventListener("DOMContentLoaded", function () {
         city.innerHTML = document.getElementById("city").value;
         state.innerHTML = document.getElementById("state").value;
         zipcode.innerHTML = document.getElementById("zipcode").value;
+        comments.innerHTML = document.getElementById("comments").value;
+
+      
+        
   
         var checks = $('input[name="link"]:checked')
           .map(function () {
