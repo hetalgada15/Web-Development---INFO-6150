@@ -1,0 +1,11 @@
+%placeholder-style {
+    border: 2px solid $secondary-color;
+    padding: 10px;
+  }
+  
+  .placeholder-container {
+    @extend %placeholder-style;
+    background-color: $primary-color;
+    color: white;
+  }
+  
