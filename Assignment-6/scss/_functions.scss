@@ -1,0 +1,5 @@
+@function font-properties($font-size, $line-height) {
+    $font-size: round($font-size * $line-height);
+    $line-height: $line-height;
+    @return $font-size $line-height;
+}

@@ -1,0 +1,17 @@
+@mixin entire-page{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;   
+}
+
+@mixin interpolation($size,$val1 , $val2){
+    color: $val1;
+    font-#{$size}: $val2;
+}
+  

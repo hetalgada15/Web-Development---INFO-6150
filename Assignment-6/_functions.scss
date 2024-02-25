@@ -1,8 +1,0 @@
-@function calculate-width($columns, $gap) {
-    @return (100% - (#{$columns} - 1) * #{$gap}) / #{$columns};
-  }
-  
-  .dynamic-width {
-    width: calculate-width(3, 20px);
-  }
-  

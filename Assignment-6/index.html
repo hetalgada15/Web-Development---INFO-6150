@@ -1,36 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Uber-like App - Home</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>TechStore    </title>
 </head>
+
 <body>
-  <div class="grid-container">
-    <div class="grid-item">Pickup Location</div>
-    <div class="grid-item">Choose Destination</div>
-    <div class="grid-item">Select Ride</div>
-  </div>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+            </ul>
+        </nav>
+    </header>
+        
+        <!-- Main Content -->
+        <main class="home-content">
+            <h1>Welcome to TechStore</h1>
+            <p>Your one-stop shop for electronic gadgets and accessories.</p>
+    
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="images/apple watch.jpg" alt="Image 1">
+                </div>
+                <div class="slide fade">
+                    <img src="images/ipad.jpg" alt="Image 2">
+                </div>
+                <div class="slide fade">
+                    <img src="images/macbook.jpg"  alt="Image 3">
+                </div>
+                <div class="slide fade">
+                    <img src="images/smartphone.jpg" alt="Image 3">
+                </div>
+            </div>
 
-  <div class="flex-container">
-    <div class="flex-item">Promotions</div>
-    <div class="flex-item">Your Rides</div>
-    <div class="flex-item">Payment Options</div>
-  </div>
+            <p> Partner Companies</p>
+            <!-- Flexbox Layout Example 2 -->
+            <div class="flexbox-example">
+                <div class="flexbox-item" style="flex-grow: 2"><img src="images/applesymbol.jpg" ></div>
+                <div class="flexbox-item" style="flex-grow: 2"><img src="images/samsungsymbol.jpg" ></div>
+                <div class="flexbox-item" style="flex-grow: 2"><img src="images/motorolalogo.jpg"></div>
+                <div class="flexbox-item" style="flex-grow: 2"><img src="images/googlelogo.jpg"></div>
+            </div>
+            <br><br>
+            <p> What all do we offer?</p>
+            <!-- Flexbox Layout Example 2 -->
+            <div class="flexbox-example">
+                <div class="flexbox-item" style="flex-grow: 2"><img src="images/offer1.png" ></div>
+                <div class="flexbox-item" style="flex-grow: 2"><img src="images/offer2.jpg" ></div>
+                <div class="flexbox-item" style="flex-grow: 2"><img src="images/offer3.jpg"></div>
+                <div class="flexbox-item" style="flex-grow: 2"><img src="images/offer4.jpg"></div>
+                <div class="flexbox-item" style="flex-grow: 2"><img src="images/offer5.jpg"></div>
+            </div>
 
-  <div class="nested-container">
-    <p class="nested-item">Welcome to our Uber-like App!</p>
-  </div>
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p style="margin-bottom: 5px; margin-top: 0px; font-size: 15px;margin-top: 10px;font-family: Arial, sans-serif;">Contact Us</p>
+            <p style="margin-bottom: 40px; margin-top: 10px; font-size: 15px;font-weight: 500;font-family: Arial, sans-serif;">123 Main St, New York - 00000, USA</p>
+            <p style="margin-bottom: 0px; margin-top: 20px; font-size: 13px;">&copy; 2023 TechStore</p>
+        </footer>
 
-  <button class="custom-button">Book Now</button>
+        <script>
+            let slideIndex = 0;
+            showSlides();
 
-  <div class="placeholder-container">
-    Placeholder Container
-  </div>
+            function showSlides() {
+                const slides = document.getElementsByClassName("slide");
 
-  <div class="dynamic-width">
-    Dynamic Width Container
-  </div>
-</body>
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds (adjust as needed)
+            }
+
+        </script>
+    </body>
+
 </html>

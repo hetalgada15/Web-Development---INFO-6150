@@ -1,0 +1,87 @@
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-item {
+  background-color: #333;
+  color: rgb(156, 156, 156);
+  text-align: center;
+  font-size: 15px;
+}
+
+/* Header Styles */
+.header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.product-grid .product-card img {
+  border: 5px solid white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.catalog-content, .product-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.catalog-content h1, .product-grid h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.product-grid .product-card {
+  width: calc(33.33% - 20px);
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1019607843);
+}
+.product-grid .product-card img {
+  width: 100%;
+  height: auto;
+}
+.product-grid .product-card h2 {
+  color: #333;
+  font-size: 18px;
+  margin: 10px 0;
+}
+.product-grid .product-card p {
+  font-size: 14px;
+  line-height: 1.5;
+}

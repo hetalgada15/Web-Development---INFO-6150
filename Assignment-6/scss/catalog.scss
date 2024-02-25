@@ -1,0 +1,64 @@
+@import 'variables';
+@import 'footer';
+@import 'headers';
+@import'mixins';
+@import 'placeholders';
+@import 'functions';
+
+$test:3;
+$price-google-pixel: 999.99;
+
+*{
+    @include entire-page;  //Mixin
+}
+
+body {
+    @include body; //Mixin
+}
+
+.catalog-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+.product-grid {
+    @extend .catalog-content; //Extra property
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .product-card {
+      width: calc(33.33% - 20px);
+      @if $test < 5 {                     //Extra property
+        background-color: $third-color;   //Variables
+      }@else {
+        background-color: $primary-color;
+      }    
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px adjust-hue(#0000001a, 10); //Extra property
+
+      img {
+        width: 100%;
+        height: auto;
+        @extend %bordered-image ; //Placeholder
+      }
+
+      h2 {
+        @include interpolation("size",$primary-color,18px); //Interpolation
+        margin: 10px 0;
+      }
+
+      p {
+        $font-properties: font-properties(9px, 1.5);  //Function
+        font-size: nth($font-properties, 1);
+        line-height: nth($font-properties, 2);
+      }
+    }
+}
