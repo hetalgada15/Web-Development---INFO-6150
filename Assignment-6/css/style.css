@@ -7,7 +7,8 @@
 
 .header nav ul {
   list-style: none;
-  padding: 10px 0;
+  padding: 20px 0;
+  margin: 10px;
 }
 
 .header nav ul li {
@@ -97,4 +98,76 @@ body {
   font-weight: bold;
   font-size: 20px;
   margin-top: 20px;
+}
+
+
+
+.flexbox-section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexbox-section1 .flexbox-item {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+.flexbox-section1 .flexbox-item img {
+  max-width: 200px;
+  height: 150px;
+}
+
+.grid-section1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.grid-section1 .grid-item {
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+.grid-section1 .grid-item img {
+  max-width: 200px;
+  height: 150px;
+}
+
+.flexbox-section2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexbox-section2 .flexbox-item {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+.flexbox-section2 .flexbox-item img {
+  max-width: 200px;
+  height: 150px;
+}
+
+.grid-section2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.grid-section2 .grid-item {
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+.grid-section2 .grid-item img {
+  max-width: 200px;
+  height: 150px;
 }
