@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Stopwatch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        .time {
+            font-size: 32px;
+            margin: 20px;
+        }
+        
+        button {
+            font-size: 18px;
+            margin: 10px;
+            padding: 10px 20px;
+        }
+        .watch {
+                width: 325px;
+                margin: 0 auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+    </style>
+</head>
+<body>
+    <div class="watch">
+		<div class="time">
+			00:00:00
+		</div>
+		<input type="date" id="datepicker" name="datepicker"><br><br>
+
+		<div class="controls">
+			<button id="start">Start</button>
+			<button id="stop">Stop</button>
+			<button id="reset">Reset</button>
+		</div>
+	</div>
+    <script src="PartB.js"></script>
+</body>
+</html>
