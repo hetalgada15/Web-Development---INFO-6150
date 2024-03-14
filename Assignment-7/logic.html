@@ -9,17 +9,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Part A - Login</title>
     <style>
+
+                /* Style for the login form container */
             .login-form {
                 width: 325px;
                 margin: 0 auto;
                 padding: 20px;
                 border: 1px solid #ccc;
                 border-radius: 5px;
+                background-color: #f9f9f9;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             }
-    
+
+            /* Style for the heading */
+            h1 {
+                text-align: center;
+            }
+
+            /* Style for the input labels */
+            label {
+                font-weight: bold;
+            }
+
+            /* Style for the input fields */
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                padding: 8px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                box-sizing: border-box; /* Ensure padding and border are included in the width */
+            }
+
+            /* Style for the error messages */
             .error {
                 color: red;
+                margin-top: 5px;
             }
+
+            /* Style for the login button */
+            #login-button {
+                width: 100%;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                background-color: #4CAF50; /* Green */
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            #login-button:disabled {
+                background-color: #cccccc; /* Grey */
+                cursor: not-allowed;
+            }
+
+            #login-button:hover:enabled {
+                background-color: #45a049;
+            }
+
+            #login-button:active:enabled {
+                background-color: #3e8e41;
+            }
+
     </style>
 </head>
 <body>
